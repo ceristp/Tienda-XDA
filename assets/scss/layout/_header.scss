@@ -1,0 +1,46 @@
+// # Encabezado
+
+.header {
+    background-image: url('../img/imagen1.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-position: 0% 5%;
+    background-size: cover;
+}
+
+.about {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__text {
+        color: $granite-gray;
+        font-weight: $regular;
+
+        span {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .header {
+        background-position: 0% 20%;
+    }
+    .about {
+        padding: 2rem 4rem;
+    }
+    .about__text {
+        span {
+            display: inline;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .header {
+        background-position: 0% 10%;
+        width: 60vw;
+    }
+}
